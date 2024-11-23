@@ -1,14 +1,14 @@
 const langData = {
     "en_US": {
-        "prefix.get": "Prefix is: {prefix}"
+        "prefix.get": "✨ Prefix is: {prefix}"
     },
     "vi_VN": {
-        "prefix.get": "Prefix hiện tại là: {prefix}"
+        "prefix.get": "✨ Prefix hiện tại là: {prefix}"
     }
 }
 
 function onCall({ message, getLang, data }) {
-    if (message.body == "prefix" && message.senderID != global.botID) {
+    if (message.body == "Prefix" && message.senderID != global.botID) {
         message.reply(getLang("prefix.get", {
             prefix: data?.thread?.data?.prefix || global.config.PREFIX
         }));
