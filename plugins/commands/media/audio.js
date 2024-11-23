@@ -8,7 +8,7 @@ const _48MB = 48 * 1024 * 1024;
 
 const config = {
     name: "audio",
-    aliases: ['yt2mp3', 'sing'],
+    aliases: ['yt'],
     version: "1.0.3",
     description: "Play music from youtube",
     usage: '<keyword/url>',
