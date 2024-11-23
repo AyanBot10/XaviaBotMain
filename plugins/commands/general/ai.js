@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const config = {
-    name: "gpt",
-    aliases: ["chatgpt"],
+    name: "ai",
+    aliases: ["hercai"],
     description: "Ask a question to the GPT.",
     usage: "[query]",
     category: "𝙴𝚍𝚞𝚌𝚊𝚝𝚒𝚘𝚗",
@@ -15,7 +15,7 @@ const config = {
 
 async function onCall({ message, args }) {
     if (!args.length) {
-        message.reply("🗨️✨ | 𝙲𝚑𝚊𝚝𝙶𝙿𝚃\n━━━━━━━━━━━━━━━━\nHello! How can I assist you today?\n━━━━━━━━━━━━━━━━");
+        message.reply("(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠) | 𝙰𝚢𝚊𝚗 𝙰𝚒\n・──────────────・\nHello! How can I assist you today?\n・───── >ᴗ< ──────・");
         return;
     }
 
@@ -34,7 +34,7 @@ async function onCall({ message, args }) {
         console.log("API response: ", response.data);
 
             const gptResponse = response.data.reply;
-            await message.send(`🗨️✨ | 𝙲𝚑𝚊𝚝𝙶𝙿𝚃\n━━━━━━━━━━━━━━━━\n${gptResponse}\n━━━━━━━━━━━━━━━━`);
+            await message.send(`(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠) | 𝙰𝚢𝚊𝚗 𝙰𝚒\n・──────────────・\n${gptResponse}\n・───── >ᴗ< ──────・`);
 
     } catch (error) {
         // Log the error for debugging
